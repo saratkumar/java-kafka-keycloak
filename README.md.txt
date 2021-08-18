@@ -12,7 +12,7 @@ After installaing all the images, we need to connect all the containers under on
 
 - docker network create NETWORK_NAME
 
-after successful creation, then we need to map all the container under the newly created network
+after successful creation, then we need to map all the containers under the newly created network
 
 - docker network connect NETWORK_NAME CONTAINER_NAME
 
