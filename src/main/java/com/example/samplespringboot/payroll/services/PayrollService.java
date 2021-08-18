@@ -15,7 +15,7 @@ public class PayrollService {
     EmployeeRepository repository;
 
 //    @Autowired
-//    private KafkaTemplate<String, String> kafkaTemplate;
+//    private Template<String, String> kafkaTemplate;
 
     public List<EmployeeBean> getEmployeeList() {
         List<Employee> employeeList =  repository.findAll();

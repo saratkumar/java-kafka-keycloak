@@ -30,6 +30,7 @@
 <!--			</dependency>-->
 <!--		</dependencies>-->
 <!--	</dependencyManagement>-->
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -107,8 +108,34 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+<!--				<configuration>-->
+<!--					<layout>LAYERED_JAR</layout>-->
+<!--				</configuration>-->
+<!--				<configuration>-->
+<!--					<mainClass>com.places.Main</mainClass>-->
+<!--				</configuration>-->
+
+<!--				<executions>-->
+<!--					<execution>-->
+<!--						<goals>-->
+<!--							<goal>repackage</goal>-->
+<!--						</goals>-->
+<!--					</execution>-->
+<!--				</executions>-->
+			</plugin>
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>dockerfile-maven-plugin</artifactId>
+				<version>1.4.12</version>
+				<configuration>
+					<repository>sample-spring-boot-0.0.1-SNAPSHOT</repository>
+					<buildArgs>
+						<JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
+					</buildArgs>
+				</configuration>
 			</plugin>
 		</plugins>
+
 	</build>
 
 
