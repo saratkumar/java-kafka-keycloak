@@ -1,17 +1,17 @@
-package com.example.samplespringboot.payroll.Employee;
+package com.example.samplespringboot.payroll.entities;
 
 import java.util.Objects;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "employee")
+    @Table(name = "employee")
 @NamedQuery(name = "Employee.findAll", query = "SELECT s FROM Employee s")
 public class Employee {
 
     private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Integer id;
     private String name;
-    private String role;
+    private String role ="Admin";
 
     public Integer getId() {
         return this.id;
